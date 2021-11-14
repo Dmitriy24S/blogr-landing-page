@@ -381,12 +381,6 @@ footer ul {
     width: 16rem;
     font-size: 1.8rem;
   }
-  .menu-login {
-    margin-top: 0rem;
-  }
-  .menu-sign {
-    background-image: none;
-  }
   /* header - menu arrow */
   .arrow {
     background-image: url(./images/icon-arrow-light.svg);
@@ -414,12 +408,25 @@ footer ul {
     margin-top: 0;
   }
   .menu-btns .btn {
-    background-color: transparent;
     border: 1px solid transparent;
   }
+  .menu-login {
+    margin-top: 0rem;
+  }
+  .menu-sign {
+    background-image: none;
+    background-color: white;
+    color: hsl(353, 100%, 62%);
+  }
   .menu-btns .btn:hover {
-    background-color: rgba(255, 255, 255, 0.158);
     opacity: 1;
+    color: white;
+  }
+  .menu-login:hover {
+    background-color: rgba(255, 255, 255, 0.158);
+  }
+  .menu-sign:hover {
+    background-color: hsla(356, 80%, 96%, 0.616);
   }
   /* header - show menu */
   .menu.show {

@@ -14,7 +14,8 @@ body {
   font-family: "Overpass", sans-serif;
   font-size: 1.6rem;
   text-align: center;
-  min-width: 375px;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -26,10 +27,14 @@ ul {
 }
 li a {
   cursor: pointer;
-  padding: 2rem;
+  padding: 1rem;
 }
 li a:hover {
   opacity: 0.8;
+}
+button {
+  background-color: transparent;
+  border: none;
 }
 /* header */
 header {
@@ -58,6 +63,9 @@ nav {
 /* header - menu */
 .menu-icon {
   cursor: pointer;
+  padding: 1rem;
+  left: 1rem;
+  position: relative;
 }
 .menu-icon:hover {
   opacity: 0.8;
@@ -103,6 +111,9 @@ nav {
   font-size: 2rem;
   box-shadow: 0px 17px 46px -10px #7a7979ad;
 }
+.list-header:focus-within .sublist {
+  display: block;
+}
 .sublist {
   background-color: hsl(0deg 0% 96%);
   border-radius: 7px;
@@ -137,9 +148,14 @@ nav {
   padding: 0 2rem;
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
-}
-.list-header-text-wrap:hover {
+  color: white;
+  font-size: 2rem;
+  font-family: inherit;
   cursor: pointer;
+}
+.show .list-header-text-wrap {
+  font-weight: 700;
+  color: hsl(208deg 52% 31%);
 }
 .list-header-text-wrap:hover .list-header-text {
   opacity: 0.8;
@@ -198,10 +214,11 @@ nav {
 }
 .list-header.show .list-header-text-wrap .arrow {
   display: inline-block;
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 /* main - section 1 */
 main {
+  overflow-x: hidden;
   padding: 0 4rem;
 }
 section {
@@ -332,8 +349,12 @@ footer ul {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
 /* desktop */
 @media (min-width: 1078px) {
+  li a {
+    padding: 1rem 2rem;
+  }
   /* header */
   header {
     background-position: -96px 49%;
@@ -388,6 +409,8 @@ footer ul {
     width: auto;
     vertical-align: middle;
     background-repeat: no-repeat;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
   }
   /* header - menu list headers */
   .list-header {
@@ -397,7 +420,23 @@ footer ul {
     text-decoration: underline;
     opacity: 1;
   }
+  .show .list-header-text-wrap {
+    text-decoration: underline;
+    opacity: 1;
+  }
   .list-header-text-wrap:hover .list-header-text {
+    opacity: 1;
+  }
+  .list-header:hover .sublist {
+    display: block;
+  }
+  .list-header:hover .arrow {
+    display: inline-block;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  .list-header:hover .list-header-text-wrap {
+    text-decoration: underline;
     opacity: 1;
   }
   /* header - btns */

@@ -11,7 +11,9 @@
     <header>
       <nav>
         <img src="images/logo.svg" alt="logo" class="logo" />
-        <img src="images/icon-hamburger.svg" alt="menu-icon" class="menu-icon" />
+        <button aria-label="menu navigation" class="menu-icon">
+          <img src="images/icon-hamburger.svg" alt="menu-icon" />
+        </button>
         <div class="menu">
           <ul class="menu-list">
             <li class="list-header">
@@ -28,10 +30,10 @@
               </ul>
             </li>
             <li class="list-header">
-              <a href="#/" class="list-header-text-wrap">
+              <button class="list-header-text-wrap">
                 <span class="list-header-text">Company</span>
                 <span class="arrow"> </span>
-              </a>
+              </button>
               <ul class="sublist">
                 <li><a href="#/">About</a></li>
                 <li><a href="#/">Team</a></li>
@@ -40,10 +42,10 @@
               </ul>
             </li>
             <li class="list-header">
-              <a href="#/" class="list-header-text-wrap">
+              <button class="list-header-text-wrap">
                 Connect
                 <span class="arrow"> </span>
-              </a>
+              </button>
               <ul class="sublist">
                 <li><a href="#/">Contact</a></li>
                 <li><a href="#/">Newsletter</a></li>
@@ -156,13 +158,16 @@
             <li><a href="#/">Newsletter</a></li>
             <li><a href="#/">LinkedIn</a></li>
           </ul>
-          <a href="#/"></a>
         </div>
       </section>
       <div class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#/">Dmitriy</a>
+        <a
+          rel="noopener noreferrer"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#/">Dmitriy</a>
       </div>
     </footer>
     <script src="script.js"></script>
